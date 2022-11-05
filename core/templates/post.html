@@ -8,9 +8,18 @@
 <div class="container" align="center">
     <p>{{post.text}}</p>
 </div>
+{% if user==post.user.id %}
+<a href="delete/post/{{post.id}}"> <button type="button" class="btn btn-sm btn-outline-secondary">Delete Post</button></a> 
+<br />
+{% endif %}
 <div class="card-body">
     <div class="card-text">{{post.text}}</div>
     <br />
+    {% if user==post.user.id %}
+    <a href="edit-post/{{post.id}}"> <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button></a> 
+    <br />
+    {% endif %}
+   
     <div class="collapse" id="comments-{{post.id}}">
       <div class="card">
         <div class="card-body" id="comments-expanded-{{post.id}}">
