@@ -64,6 +64,8 @@ def edit(post_id):
 @views.route("/delete-post/<int:post_id>")
 @login_required
 def delete_post(post_id):
+if current_user.id != post.user.id:
+        flash("You don't have permission to delete this post", category='error')
     post = Post.query.filter_by(id=post_id).first()
 
     if not post:
