@@ -14,7 +14,7 @@
 <!-- About The Project -->
 ## About This Project
 
-This is a smimple Flask Project Built according to this Documentation by [AltSchool Africa](https://docs.google.com/document/d/19fGydy1b-imG1cUtpvDXcZwzJDSWVlFPY9yJORXC2RI/https://docs.google.com/document/d/19fGydy1b-imG1cUtpvDXcZwzJDSWVlFPY9yJORXC2RI/).
+This is a Flask Project Built according to this Documentation by [AltSchool Africa](https://docs.google.com/document/d/19fGydy1b-imG1cUtpvDXcZwzJDSWVlFPY9yJORXC2RI/https://docs.google.com/document/d/19fGydy1b-imG1cUtpvDXcZwzJDSWVlFPY9yJORXC2RI/).
 
 
 ---
