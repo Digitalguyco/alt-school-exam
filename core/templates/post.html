@@ -80,6 +80,10 @@
       <button type="submit" class="btn btn-primary">Comment</button>
     </form>
   </div>
+ {% if user.id == post.user.id %}
+  <a href="/edit-post/{{post.id}}"> <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button></a> 
+  <a href="/delete-post/{{post.id}}"> <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button></a> 
+  {% endif %}
 
 </div>
 {% endblock %}

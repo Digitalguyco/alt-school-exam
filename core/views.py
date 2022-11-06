@@ -66,13 +66,12 @@ def edit(post_id):
 def delete_post(post_id):
     post = Post.query.filter_by(id=post_id).first()
     if current_user.id != post.user.id:
-        flash("You don't have permission to delete this post", category='error')
+        flash("You don't have permission to Delete this", category='error')
+        return redirect(url_for('views.post', post_id=post.id))
     
 
     if not post:
         flash("Post does not exist.", category='error')
-    elif current_user.id != post.id:
-        flash('You do not have permission to delete this post.', category='error')
     else:
         db.session.delete(post)
         db.session.commit()
