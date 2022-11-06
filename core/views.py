@@ -5,19 +5,21 @@ from . import db
 
 views = Blueprint("views", __name__)
 
-
+# Home
 @views.route("/")
 @views.route("/home")
 def home():
     posts = Post.query.all()
     return render_template("index.html",user=current_user,posts=posts)
 
+# Post
 @views.route("/post/<int:post_id>", methods=['GET', 'POST'])
 def post(post_id):
     post = Post.query.filter_by(id=post_id).first()
     comment = Comment.query.filter_by(post_id=post_id).all()
     return render_template("post.html", user=current_user, post=post, comment=comment)
 
+# Create a post
 @views.route("/create-post", methods=['GET', 'POST'])
 @login_required
 def create_post():
@@ -38,6 +40,7 @@ def create_post():
 
     return render_template('create_post.html', user=current_user)
 
+# Edit post
 @views.route("/edit-post/<int:post_id>",methods=['POST', 'GET'])
 @login_required
 def edit(post_id):
@@ -61,6 +64,7 @@ def edit(post_id):
             return redirect(url_for('views.post', post_id=post.id))
     return render_template('edit_post.html', user=current_user, post=post)
 
+# Delete post
 @views.route("/delete-post/<int:post_id>")
 @login_required
 def delete_post(post_id):
@@ -79,7 +83,7 @@ def delete_post(post_id):
 
     return redirect(url_for('views.home'))
 
-
+# Create Comment
 @views.route("/create-comment/<int:post_id>", methods=['POST'])
 @login_required
 def create_comment(post_id):
@@ -100,6 +104,7 @@ def create_comment(post_id):
     return redirect(url_for('views.post', post_id=post_id))
 
 
+# Delete comment route
 @views.route("/delete-comment/<comment_id>")
 @login_required
 def delete_comment(comment_id):

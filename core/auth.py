@@ -4,16 +4,17 @@ from .models import User
 from flask_login import login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
+# Blueprint
 auth = Blueprint("auth", __name__)
 
-
+# Login
 @auth.route("/login", methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         email = request.form.get("email")
         password = request.form.get("password")
 
-        user = User.query.filter_by(email=email).first()
+        user = User.query.filter_by(email=email).first() # Fetching the user
         if user:
             if check_password_hash(user.password, password):
                 flash("Logged in!", category='success')
@@ -28,7 +29,7 @@ def login():
 
 
 
-
+# Sign up
 @auth.route("/sign-up", methods=['GET', 'POST'])
 def sign_up():
     if request.method == 'POST':
@@ -38,7 +39,7 @@ def sign_up():
         username = request.form.get("username")
         password1 = request.form.get("password1")
         password2 = request.form.get("password2")
-
+        # Check if email and Username already exists
         email_exists = User.query.filter_by(email=email).first()
         username_exists = User.query.filter_by(username=username).first()
 
@@ -59,6 +60,7 @@ def sign_up():
                 password1, method='sha256'), lastname=last_name, firstname=first_name)
             db.session.add(new_user)
             db.session.commit()
+            # login after sign up
             login_user(new_user, remember=True)
             flash('User created!')
             return redirect(url_for('views.home'))
@@ -66,6 +68,8 @@ def sign_up():
     return render_template("signup.html", user=current_user)
 
 
+
+# Logout
 @auth.route("/logout")
 @login_required
 def logout():
