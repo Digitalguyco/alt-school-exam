@@ -1,56 +1,8 @@
 <!-- Back to Top Navigation Anchor -->
 <a name="readme-top"></a>
 
-<!-- Project Shields -->
-<div align="center">
 
-  [![Contributors][contributors-shield]][contributors-url]
-  [![Forks][forks-shield]][forks-url]
-  [![Stargazers][stars-shield]][stars-url]
-  [![Issues][issues-shield]][issues-url]
-  [![MIT License][license-shield]][license-url]
-  [![Twitter][twitter-shield]][twitter-url]
-</div>
 
-<!-- Project Logo -->
-<div align="center">
-  
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./Images/AltSchool_DarkLogo.svg">
-    <img alt="AltSchool Logo" src="./Images/AltSchool_LightLogo.svg" width="50%">
-  </picture>
-
-  <p align="center">
-    <a href="https://github.com/Ze-Austin/altschool-python#readme"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/Ze-Austin/altschool-python/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Ze-Austin/altschool-python/issues">Request Feature</a>
-  </p>
-</div>
-
----
-
-<!-- Table of Contents -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-this-project">About This Project</a>
-    </li>
-       <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
-  </ol>
-  <p align="right"><a href="#readme-top">back to top</a></p>
-</details>
-
----
 
 <!-- Intro -->
 <h1 align="center">
