@@ -27,7 +27,7 @@ def create_post():
 
         if not text:
             flash('Post cannot be empty', category='error')
-        if not title:
+        elif not title:
             flash('Title cannot be empty', category='error')
         else:
             post = Post(text=text, author=current_user.id, title=title)
