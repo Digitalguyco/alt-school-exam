@@ -16,16 +16,6 @@
 
 This is a smimple Flask Project Built according to this Documentation by [AltSchool Africa](https://docs.google.com/document/d/19fGydy1b-imG1cUtpvDXcZwzJDSWVlFPY9yJORXC2RI/https://docs.google.com/document/d/19fGydy1b-imG1cUtpvDXcZwzJDSWVlFPY9yJORXC2RI/).
 
-### Built With:
-
-![Python][python]
-![Flask][flask]
-![Jinja][jinja]
-![HTML5][html5]
-![CSS3][css3]
-![SQLite][sqlite]
-
-<p align="right"><a href="#readme-top">back to top</a></p>
 
 ---
 
@@ -50,28 +40,11 @@ To Run This Project Do the Following:
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
----
-
-
----
-
-<!-- Contact -->
-## Contact
-
-Dr Austin Wopara - [@Ze_Austin](https://twitter.com/Ze_Austin) - austinwopara@gmail.com
-
-Project Link: [AltSchool Python](https://github.com/Ze-Austin/altschool-python)
-
-<p align="right"><a href="#readme-top">back to top</a></p>
-
----
-
----
 
 <!-- Outro -->
 <h1 align="center">
    💜
 </h1>
 
----
+
 
