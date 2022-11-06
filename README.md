@@ -6,7 +6,7 @@
 
 <!-- Intro -->
 <h1 align="center">
-  Hello and Welcome! 👋🏾
+  Hola
 </h1>
 
 ---
